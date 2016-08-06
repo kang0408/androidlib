@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="E:\src\androidstudio\TestDemo\androidLib\src\main\res"><file name="shape_loading_image_dialog_layout" path="E:\src\androidstudio\TestDemo\androidLib\src\main\res\drawable\shape_loading_image_dialog_layout.xml" qualifiers="" type="drawable"/><file name="ic_launcher" path="E:\src\androidstudio\TestDemo\androidLib\src\main\res\drawable-hdpi\ic_launcher.png" qualifiers="hdpi" type="drawable"/><file name="ic_launcher" path="E:\src\androidstudio\TestDemo\androidLib\src\main\res\drawable-mdpi\ic_launcher.png" qualifiers="mdpi" type="drawable"/><file name="ic_launcher" path="E:\src\androidstudio\TestDemo\androidLib\src\main\res\drawable-xhdpi\ic_launcher.png" qualifiers="xhdpi" type="drawable"/><file name="ic_launcher" path="E:\src\androidstudio\TestDemo\androidLib\src\main\res\drawable-xxhdpi\ic_launcher.png" qualifiers="xxhdpi" type="drawable"/><file name="dialog_loading_image" path="E:\src\androidstudio\TestDemo\androidLib\src\main\res\layout\dialog_loading_image.xml" qualifiers="" type="layout"/><file path="E:\src\androidstudio\TestDemo\androidLib\src\main\res\values\strings.xml" qualifiers=""><string name="error_server_common_msg">系统异常</string><string name="common_communication_fail">通讯异常</string><string name="common_dialog_title_info"/><string name="app_name">AndroidLib</string><string name="common_connecting"/><string name="common_dialog_title_error">系统异常</string></file><file path="E:\src\androidstudio\TestDemo\androidLib\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style><style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style></file><file path="E:\src\androidstudio\TestDemo\androidLib\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 11 theme customizations can go here. -->
+    </style></file><file path="E:\src\androidstudio\TestDemo\androidLib\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+        <!-- API 14 theme customizations can go here. -->
+    </style></file></source><source path="E:\src\androidstudio\TestDemo\androidLib\build\generated\res\rs\release"/><source path="E:\src\androidstudio\TestDemo\androidLib\build\generated\res\generated\release"/></dataSet><dataSet config="release"><source path="E:\src\androidstudio\TestDemo\androidLib\src\release\res"/></dataSet><mergedItems/></merger>

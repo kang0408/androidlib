@@ -1,0 +1,17 @@
+<resources>
+
+    <string name="app_name">AndroidLib</string>
+
+    
+    
+    <string name="common_communication_fail">通讯异常</string>
+
+    <string name="common_dialog_title_error">系统异常</string>
+
+    <string name="error_server_common_msg">系统异常</string>
+    <string name="common_dialog_title_info"></string>
+    <string name="common_connecting"></string>
+    
+    
+
+</resources>

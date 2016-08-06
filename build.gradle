@@ -1,0 +1,129 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+version = "1.0.0"
+group = "com.langk.android" // Maven Group ID for the artifact，一般填你唯一的包名
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '21.1.2'
+    resourcePrefix "less_"     //这里随便填
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+
+def siteUrl = 'https://github.com/kang0408/androidlib' // 项目的主页
+def gitUrl = 'https://github.com/kang0408/androidlib.git' // Git仓库的url
+
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    configurations = ['archives']
+    pkg {
+        repo = "com.langk.android"
+        name = "android-lib"    //发布到JCenter上的项目名字
+        desc = 'Bintray aar publishing example'
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        labels = ['aar', 'android', 'example']
+        publicDownloadNumbers = true
+        version{
+            name ='1.0.0'
+            desc = 'Gradle Bintray Plugin 1.0 final'
+            attributes = ['gradle-plugin': 'com.use.less:com.use.less.gradle:gradle-useless-plugin']
+        }
+    }
+}
+
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                // Add your description here
+                name 'LangK s android lib' //项目描述
+                url siteUrl
+                // Set your license
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'langk'    //填写的一些基本信息
+                        name 'LangK'
+                        email 'kang0408@yeah.net'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.google.code.gson:gson:1.7.1'
+    compile 'com.android.support:appcompat-v7:19.1.0'
+    compile files('libs/android-async-http-1.4.8.jar')
+    compile files('libs/android-query-full.0.26.2-beta.jar')
+    compile files('libs/commons-codec-1.5.jar')
+    compile files('libs/commons-io-2.4.jar')
+    compile files('libs/fastjson-1.1.33.jar')
+    compile files('libs/guice-4.0-beta-no_aop.jar')
+    compile files('libs/javax.inject-1.jar')
+    compile files('libs/ormlite-android-4.46.jar')
+    compile files('libs/ormlite-core-4.46.jar')
+    compile files('libs/roboguice-3.0-alpha-2.jar')
+}
+
+
+
+
+//task sourcesJar(type: Jar) {
+//    from android.sourceSets.main.java.srcDirs
+//    classifier = 'sources'
+//}
+
+//task javadoc(type: Javadoc) {
+//    source = android.sourceSets.main.java.srcDirs
+//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//}
+
+//task javadocJar(type: Jar, dependsOn: javadoc) {
+//    classifier = 'javadoc'
+//    from javadoc.destinationDir
+//}
+//artifacts {
+//    archives javadocJar
+//    archives sourcesJar
+//}
+//
+//task findConventions << {
+//    println project.getConvention()
+//}
+
